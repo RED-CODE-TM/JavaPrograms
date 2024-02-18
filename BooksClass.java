@@ -60,4 +60,15 @@ public class BooksClass {
                     booknm2=getUserInput.next();
                     System.out.println("you are  only allowed "+booknm1+" and "+booknm2);
                 }
-                
+      else{
+                    booknm1=getUserInput.next();
+                    booknm2=getUserInput.next();
+                    booknm3=getUserInput.next();
+                     System.out.println("you are  only allowed these books "+booknm1+" and "+booknm2+" and "+booknm3);
+                    
+                }
+            break;
+            }}
+            }
+    }
+              
