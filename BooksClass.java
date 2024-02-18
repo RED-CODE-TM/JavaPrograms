@@ -24,9 +24,26 @@ public class BooksClass {
                     System.out.println("you are allowed"+booknm1);
                     
                 }
-                   else if(nbrBook<=2){
+                              else if(nbrBook<=2){
                     booknm1=getUserInput.next();
                     booknm2=getUserInput.next();
                     System.out.println("you are  only allowed "+booknm1+" and "+booknm2);
                 }
-              
+                else{
+                    booknm1=getUserInput.next();
+                    booknm2=getUserInput.next();
+                    booknm3=getUserInput.next();
+                     System.out.println("you are  only allowed these books "+booknm1+" and "+booknm2+" and "+booknm3);
+                    
+                }
+            break;
+            }}
+        
+        else{if(nbrBook>3)for(;;){
+            System.out.println("the maximum number of books you are allowed must be 3");
+            System.out.println("Please re-enter the number of books");
+            nbrBook=getUserInput.nextInt();
+            if(nbrBook<=3)
+                break;
+                 }
+       
