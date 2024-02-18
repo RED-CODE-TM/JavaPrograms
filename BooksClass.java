@@ -46,4 +46,11 @@ public class BooksClass {
             if(nbrBook<=3)
                 break;
                  }
-       
+        for(int i=1;i<=nbrBook;i++)
+        {
+              System.out.println("Enter"+" "+nbrBook+""+"Books");
+                if(nbrBook==1){
+                    booknm1=getUserInput.next();
+                    System.out.println("you are allowed"+booknm1);
+                    
+                }
