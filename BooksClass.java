@@ -54,3 +54,10 @@ public class BooksClass {
                     System.out.println("you are allowed"+booknm1);
                     
                 }
+                
+     else if(nbrBook<=2){
+                    booknm1=getUserInput.next();
+                    booknm2=getUserInput.next();
+                    System.out.println("you are  only allowed "+booknm1+" and "+booknm2);
+                }
+                
