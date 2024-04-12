@@ -33,9 +33,6 @@ public class QuickFoodOrderManagement extends Frame {
                 openMenuWindow();
             }
         });
-        
-        //1
-        
         add(viewMenuButton);
 
        
@@ -77,7 +74,7 @@ public class QuickFoodOrderManagement extends Frame {
     }
 }
 
-//24  
+
 class MenuWindow extends Frame {
     public MenuWindow(Frame parent) {
      
@@ -113,11 +110,10 @@ class MenuWindow extends Frame {
                 dispose();
             }
         });
-       
         add(backButton);
     }
 }
- //3
+
 
 class PlaceOrderWindow extends Frame {
     public PlaceOrderWindow(Frame parent) {
@@ -135,5 +131,34 @@ class PlaceOrderWindow extends Frame {
                 dispose();
             }
         });
-//4
 
+       
+        setLayout(new FlowLayout());
+        TextField nameField = new TextField(20);
+        add(new Label("Enter your name:"));
+        add(nameField);
+
+    
+        Button submitButton = new Button("Submit Order");
+         submitButton.setForeground(Color.blue);
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
+                String name = nameField.getText();
+                String message = "thank you " + name + "."+"your order has been submitted"+".";
+                JOptionPane.showMessageDialog(null, message);
+            }
+        });
+        add(submitButton);
+
+      
+        Button backButton = new Button("Close");
+        backButton.setForeground(Color.pink);
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        add(backButton);
+    }
+}
