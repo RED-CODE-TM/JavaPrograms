@@ -118,3 +118,22 @@ class MenuWindow extends Frame {
     }
 }
  //3
+
+class PlaceOrderWindow extends Frame {
+    public PlaceOrderWindow(Frame parent) {
+       
+        setTitle("Place Your Order");
+        setSize(300, 200);
+
+        
+        setLocation(parent.getX() + parent.getWidth() / 2 - getWidth() / 2,
+                parent.getY() + parent.getHeight() / 2 - getHeight() / 2);
+
+       
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                dispose();
+            }
+        });
+//4
+
