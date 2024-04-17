@@ -67,3 +67,41 @@ public class GardenPlanner extends JFrame {
         mainFrame.setVisible(true);
     }
 }
+// Layout planning window class
+class LayoutPlanningWindow extends JFrame {
+    // Components
+    private JTextField lengthField;
+    private JTextField widthField;
+
+    public LayoutPlanningWindow(JFrame parent) {
+        // Set title and size
+        setTitle("Plan Layout");
+        setSize(300, 200);
+
+        // Set layout
+        setLayout(new FlowLayout());
+
+        // Label and text fields for dimensions
+        JLabel lengthLabel = new JLabel("Length:");
+        add(lengthLabel);
+        lengthField = new JTextField(10);
+        lengthLabel.setForeground(Color.blue);
+        add(lengthField);
+
+        JLabel widthLabel = new JLabel("Width:");
+        add(widthLabel);
+        widthField = new JTextField(10);
+        widthLabel.setForeground(Color.blue);
+        add(widthField);
+        // Draw Layout button
+        JButton drawLayoutButton = new JButton("Draw Layout");
+        drawLayoutButton.setForeground(Color.magenta);
+        drawLayoutButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int length = Integer.parseInt(lengthField.getText());
+                int width = Integer.parseInt(widthField.getText());
+
+                // Simulate drawing layout
+                JOptionPane.showMessageDialog(null, "Layout drawn with dimensions: " + length + " x " + width);
+            }
+        });
