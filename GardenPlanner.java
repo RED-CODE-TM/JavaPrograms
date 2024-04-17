@@ -140,3 +140,29 @@ class PlantSelectionWindow extends JFrame {
         plantList = new JComboBox<>(plants);
         plantList.setForeground(Color.BLUE);
         add(plantList);
+         // Add to Garden button
+        JButton addToGardenButton = new JButton("Add to Garden");
+        addToGardenButton.setForeground(Color.magenta);
+        addToGardenButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String selectedPlant = (String) plantList.getSelectedItem();
+                JOptionPane.showMessageDialog(null, selectedPlant + " added to garden!");
+            }
+        });
+        
+        add(addToGardenButton);
+
+        // Back button
+        JButton backButton = new JButton("Close");
+        backButton.setForeground(Color.magenta);
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        add(backButton);
+
+        // Center the window relative to the parent
+        setLocationRelativeTo(parent);
+    }
+}
