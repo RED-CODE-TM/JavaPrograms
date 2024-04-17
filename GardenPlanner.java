@@ -40,3 +40,30 @@ public class GardenPlanner extends JFrame {
                 openPlantSelectionWindow();
             }
         });
+          add(PlantsButton);
+    }
+
+    // Method to open the layout planning window
+    private void openLayoutPlanningWindow() {
+        LayoutPlanningWindow layoutWindow = new LayoutPlanningWindow(this);
+        layoutWindow.setVisible(true);
+    }
+
+    // Method to open the plant selection window
+    private void openPlantSelectionWindow() {
+        PlantSelectionWindow plantWindow = new PlantSelectionWindow(this);
+        plantWindow.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Set custom look and feel
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        GardenPlanner mainFrame = new GardenPlanner();
+        mainFrame.setVisible(true);
+    }
+}
