@@ -105,3 +105,38 @@ class LayoutPlanningWindow extends JFrame {
                 JOptionPane.showMessageDialog(null, "Layout drawn with dimensions: " + length + " x " + width);
             }
         });
+         add(drawLayoutButton);
+
+        // Back button
+        JButton backButton = new JButton("Close");
+        backButton.setForeground(Color.magenta);
+        backButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+        add(backButton);
+
+        // Center the window relative to the parent
+        setLocationRelativeTo(parent);
+    }
+}
+
+// Plant selection window class
+class PlantSelectionWindow extends JFrame {
+    // Components
+    private JComboBox<String> plantList;
+
+    public PlantSelectionWindow(JFrame parent) {
+        // Set title and size
+        setTitle("Select Plants");
+        setSize(300, 200);
+
+        // Set layout
+        setLayout(new FlowLayout());
+
+        // Plant list
+        String[] plants = {"Tomato", "Cucumber", "Roses", "Lavender", "Sunflower"};
+        plantList = new JComboBox<>(plants);
+        plantList.setForeground(Color.BLUE);
+        add(plantList);
